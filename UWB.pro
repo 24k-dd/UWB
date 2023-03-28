@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets charts serialport
 
@@ -24,21 +24,40 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwidget.cpp \
-    chartview.cpp \
-    callout.cpp \
-    mainwindow.cpp
+        main.cpp
+#        mainwidget.cpp \
+#    chartview.cpp \
+#    callout.cpp \
+#    mainwindow.cpp
 
 
-HEADERS += \
-    config.h \
-        mainwidget.h \
-    chartview.h \
-    callout.h \
-    mainwindow.h
+#HEADERS += \
+#        mainwidget.h \
+#    chartview.h \
+#    callout.h \
+#    mainwindow.h
 
 
-FORMS += \
-        mainwidget.ui \
-    mainwindow.ui
+#FORMS += \
+#        mainwidget.ui \
+#    mainwindow.ui
+
+INCLUDEPATH += $$PWD
+INCLUDEPATH += $$PWD/api
+INCLUDEPATH += $$PWD/ui
+INCLUDEPATH += $$PWD/model
+INCLUDEPATH += $$PWD/pkg
+INCLUDEPATH += $$PWD/bll
+INCLUDEPATH += $$PWD/pkg
+
+include ($$PWD/api/api.pri)
+include ($$PWD/ui/ui.pri)
+include ($$PWD/model/model.pri)
+include ($$PWD/pkg/pkg.pri)
+include ($$PWD/bll/bll.pri)
+include ($$PWD/pkg/pkg.pri)
+
+RESOURCES += \
+    res.qrc
+
+
