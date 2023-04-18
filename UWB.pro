@@ -4,13 +4,13 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network sql
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets charts serialport
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets charts
 
-TARGET = QtChart
+#TARGET = F:/qt-file/build-UWB-Desktop_Qt_5_11_0_MinGW_32bit-Release/debug/QtChart.exe
 TEMPLATE = app
-
+CONFIG += c++11 console
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -25,22 +25,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp
-#        mainwidget.cpp \
-#    chartview.cpp \
-#    callout.cpp \
-#    mainwindow.cpp
-
-
-#HEADERS += \
-#        mainwidget.h \
-#    chartview.h \
-#    callout.h \
-#    mainwindow.h
-
-
-#FORMS += \
-#        mainwidget.ui \
-#    mainwindow.ui
 
 INCLUDEPATH += $$PWD
 INCLUDEPATH += $$PWD/api

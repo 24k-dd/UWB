@@ -24,6 +24,13 @@ public:
   explicit MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+public slots:
+  void showCurPoint(const QVector<Show_Info> &data);
+
+  void showTopicOne();
+
+  void showTopicTwo();
+  void showTopicThree();
 
 private:
   Ui::MainWindow *ui;

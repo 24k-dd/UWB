@@ -22,8 +22,6 @@ public:
   explicit LoginWidget(QWidget *parent = nullptr);
   ~LoginWidget();
 
-   void closeEvent(QCloseEvent *event);
-
    void create();
 
 signals:
@@ -41,8 +39,6 @@ private:
   QLineEdit *lineEdit_password = NULL;
   QString username;
   QString password;
-
-  int flag = 1;
 
 };
 

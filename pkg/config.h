@@ -1,19 +1,18 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include<QProcess>
-#include<QVariantList>
 #include<QJsonArray>
 #include<QJsonDocument>
 #include<QByteArray>
-#include<QApplication>
 #include<QJsonObject>
-#include<QVector>
 #include<QDataStream>
 
-#include"Model.h"
+
+#include"model/Model.h"
 
 //转为json格式数据
+//QByteArray structToJson(const Send_Info &sendDataInfo);
+
 inline QByteArray structToJson(const Send_Info &sendDataInfo)
 {
   QJsonObject jsonObject;
@@ -37,25 +36,6 @@ inline QByteArray structToJson(const Send_Info &sendDataInfo)
   QByteArray sendData = jsonStr.toUtf8();
   return sendData;
 }
-
-//字符串转json格式数据
-inline QJsonObject QstringToJson(QString jsonString)
-{
-  QJsonDocument jsonDocument = QJsonDocument::fromJson(jsonString.toLocal8Bit().data());
-  if(jsonDocument.isNull())
-    {
-      //      qDebug()<< "String NULL"<< jsonString.toLocal8Bit().data();
-    }
-  QJsonObject jsonObject = jsonDocument.object();
-  return jsonObject;
-}
-
-//json格式转字符串
-inline QString JsonToQstring(QJsonObject jsonObject)
-{
-  return QString(QJsonDocument(jsonObject).toJson());
-}
-
 
 
 

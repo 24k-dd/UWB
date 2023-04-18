@@ -19,6 +19,7 @@ void ChartView::mousePressEvent(QMouseEvent *event)
     QChartView::mousePressEvent(event);
 }
 
+
 void ChartView::mouseMoveEvent(QMouseEvent *event)
 {
     int x, y;

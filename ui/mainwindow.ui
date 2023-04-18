@@ -113,8 +113,8 @@
    <widget class="QTreeWidget" name="treeWidget_group">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>170</y>
+      <x>630</x>
+      <y>110</y>
       <width>256</width>
       <height>192</height>
      </rect>
@@ -134,20 +134,12 @@
     </column>
     <column>
      <property name="text">
-      <string>标识</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>坐标</string>
      </property>
     </column>
     <item>
      <property name="text">
       <string>医生</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
      <property name="text">
       <string/>
@@ -163,9 +155,6 @@
        <string>火麟飞</string>
       </property>
       <property name="text">
-       <string>红色</string>
-      </property>
-      <property name="text">
        <string>(103,340)</string>
       </property>
      </item>
@@ -173,9 +162,6 @@
     <item>
      <property name="text">
       <string>教师</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
      <property name="text">
       <string/>
@@ -194,16 +180,10 @@
      <property name="text">
       <string/>
      </property>
-     <property name="text">
-      <string/>
-     </property>
     </item>
     <item>
      <property name="text">
       <string>警察</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
      <property name="text">
       <string/>
@@ -292,8 +272,16 @@
     <property name="title">
      <string>帮助</string>
     </property>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>更改主题</string>
+     </property>
+     <addaction name="action_topic1"/>
+     <addaction name="action_topic2"/>
+     <addaction name="action_topic3"/>
+    </widget>
     <addaction name="action_3"/>
-    <addaction name="action_11"/>
+    <addaction name="menu_7"/>
     <addaction name="action_12"/>
     <addaction name="action_13"/>
    </widget>
@@ -477,11 +465,6 @@
     <string>使用说明</string>
    </property>
   </action>
-  <action name="action_11">
-   <property name="text">
-    <string>更改主题</string>
-   </property>
-  </action>
   <action name="action_12">
    <property name="text">
     <string>待设置</string>
@@ -490,6 +473,21 @@
   <action name="action_13">
    <property name="text">
     <string>待设置</string>
+   </property>
+  </action>
+  <action name="action_topic1">
+   <property name="text">
+    <string>主题1</string>
+   </property>
+  </action>
+  <action name="action_topic2">
+   <property name="text">
+    <string>主题2</string>
+   </property>
+  </action>
+  <action name="action_topic3">
+   <property name="text">
+    <string>主题3</string>
    </property>
   </action>
  </widget>

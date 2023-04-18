@@ -4,7 +4,8 @@ HEADERS += \
     $$PWD/loginwidget.h \
     $$PWD/chartview.h \
     $$PWD/mainwindow.h \
-    $$PWD/mainwidget.h
+    $$PWD/mainwidget.h \
+    $$PWD/checkidwidget.h
 
 
 
@@ -13,7 +14,8 @@ SOURCES += \
     $$PWD/loginwidget.cpp \
     $$PWD/chartview.cpp \
     $$PWD/mainwindow.cpp \
-    $$PWD/mainwidget.cpp
+    $$PWD/mainwidget.cpp \
+    $$PWD/checkidwidget.cpp
 
 FORMS += \
     $$PWD/mainwidget.ui \

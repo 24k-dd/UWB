@@ -8,20 +8,13 @@ LoginWidget::LoginWidget(QWidget *parent) :
 
 LoginWidget::~LoginWidget()
 {
-
+  delete lineEdit_username;
+  lineEdit_username = nullptr;
+  delete lineEdit_password;
+  lineEdit_password = nullptr;
 
 }
 
-//当输入密码不对关闭应用程序时，系统会将main程序关闭
-void LoginWidget::closeEvent(QCloseEvent *event)
-{
-  if(flag == 1)
-    {
-      // 通过进程名字结束进程
-      QProcess::startDetached("taskkill -t  -f /IM " + QString("main.exe"));
-      QProcess::startDetached("taskkill -t  -f /IM " + QString("main.exe"));
-    }
-}
 
 void LoginWidget::create()
 {
@@ -110,8 +103,8 @@ void LoginWidget::login_clicked()
     {
       //主界面
       mainWindow = new MainWindow();
+
       //标志位
-      flag = 0;
       mainWindow->show();
 
       this->close();
